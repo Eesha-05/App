@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>⚡ TaskBoard</h1>
+    <span id="count">0 tasks</span>
+  </header>
+
+  <main>
+    <div class="input-row">
+      <input type="text" id="taskInput" placeholder="What needs to be done?" maxlength="80">
+      <select id="priority">
+        <option value="low">Low</option>
+        <option value="med" selected>Med</option>
+        <option value="high">High</option>
+      </select>
+      <button id="addBtn">Add</button>
+    </div>
+
+    <div class="filters">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="active">Active</button>
+      <button class="filter" data-filter="done">Done</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <div id="empty" class="empty">No tasks yet. Add one above!</div>
+
+    <button id="clearDone">Clear Completed</button>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
